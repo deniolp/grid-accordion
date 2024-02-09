@@ -110,11 +110,27 @@ body {
 	padding: 10px;
 }
 
+.grid p,
+.grid--changed p {
+	font-size: 15px;
+	text-align: left;
+	color: rgb(70, 67, 89);
+	padding: 20px;
+}
+
 .grid > a,
 .grid--changed > a {
 	background-color: #9fd5df;
 	border: 2px solid rgb(200, 204, 225);
 	text-decoration: none;
+	container-type: size;
+}
+
+@container (max-height: 400px) {
+	.grid p,
+	.grid--changed p {
+		font-size: 0px;
+	}
 }
 
 .item1 {
