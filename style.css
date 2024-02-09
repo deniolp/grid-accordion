@@ -1,0 +1,142 @@
+:root {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+}
+
+body {
+	margin: 0;
+	min-width: 320px;
+	min-height: 100vh;
+}
+
+.container {
+	margin: 3% 2%;
+	scroll-behavior: smooth;
+	overflow-y: scroll;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-gap: 10px;
+	grid-template-areas:
+		'first second'
+		'third fourth'
+		'fifth sixth';
+	height: calc(100vh - 40px * 2);
+	transition: 700ms;
+}
+
+.grid--changed {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 10px;
+	height: calc(100vh - 10px * 2);
+	transition: 1000ms;
+}
+
+.grid--changed__1 {
+	grid-template-rows: 23vh 23vh 23vh 10vh 10vh 10vh;
+	grid-template-areas:
+		'first first'
+		'first first'
+		'first first'
+		'second second'
+		'third fourth'
+		'fifth sixth';
+}
+
+.grid--changed__2 {
+	grid-template-rows: 10vh 23vh 23vh 23vh 10vh 10vh;
+	grid-template-areas:
+		'first first'
+		'second second'
+		'second second'
+		'second second'
+		'third fourth'
+		'fifth sixth';
+}
+.grid--changed__3 {
+	grid-template-rows: 10vh 23vh 23vh 23vh 10vh 10vh;
+	grid-template-areas:
+		'first second'
+		'third third'
+		'third third'
+		'third third'
+		'fourth fourth'
+		'fifth sixth';
+}
+
+.grid--changed__4 {
+	grid-template-rows: 10vh 10vh 23vh 23vh 23vh 10vh;
+	grid-template-areas:
+		'first second'
+		'third third'
+		'fourth fourth'
+		'fourth fourth'
+		'fourth fourth'
+		'fifth sixth';
+}
+
+.grid--changed__5 {
+	grid-template-rows: 10vh 10vh 23vh 23vh 23vh 10vh;
+	grid-template-areas:
+		'first second'
+		'third fourth'
+		'fifth fifth'
+		'fifth fifth'
+		'fifth fifth'
+		'sixth sixth';
+}
+
+.grid--changed__6 {
+	grid-template-rows: 10vh 10vh 10vh 23vh 23vh 23vh;
+	grid-template-areas:
+		'first second'
+		'third fourth'
+		'fifth fifth'
+		'sixth sixth'
+		'sixth sixth'
+		'sixth sixth';
+}
+
+.grid div,
+.grid--changed div {
+	font-size: 30px;
+	font-weight: 900;
+	text-align: center;
+	color: rgb(15, 6, 138);
+	padding: 10px;
+}
+
+.grid > a,
+.grid--changed > a {
+	background-color: #f1d366;
+	border: 2px solid rgb(2, 17, 102);
+}
+
+.item1 {
+	grid-area: first;
+}
+
+.item2 {
+	grid-area: second;
+}
+
+.item3 {
+	grid-area: third;
+}
+
+.item4 {
+	grid-area: fourth;
+}
+
+.item5 {
+	grid-area: fifth;
+}
+
+.item6 {
+	grid-area: sixth;
+}
